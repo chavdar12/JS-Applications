@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Biggest Catch</title>
+    <link href="../static/styles.css" rel="stylesheet">
+    <script src="./app.js" type="module"></script>
+</head>
+
+<body>
+<header>
+    <h1>Biggest Catch</h1>
+    <nav>
+        <a class="active" id="home">Home</a>
+        <div id="user">
+            <a href="javascript:void(0)" id="logout">Logout</a>
+        </div>
+        <div id="guest">
+            <a href="login.html" id="login">Login</a>
+            <a href="register.html" id="register">Register</a>
+        </div>
+        <p class="email">Welcome, <span id="userEmail">guest</span></p>
+    </nav>
+</header>
+<main>
+    <section id="home-view">
+        <fieldset id="main">
+            <legend>Catches</legend>
+            <div id="catches">
+                <div class="catch">
+                    <label>Angler</label>
+                    <input class="angler" type="text" value="Paulo Admorim">
+                    <label>Weight</label>
+                    <input class="weight" type="text" value="636">
+                    <label>Species</label>
+                    <input class="species" type="text" value="Atlantic Blue Marlin">
+                    <label>Location</label>
+                    <input class="location" type="text" value="Vitoria, Brazil">
+                    <label>Bait</label>
+                    <input class="bait" type="text" value="trolled pink">
+                    <label>Capture Time</label>
+                    <input class="captureTime" type="number" value="80">
+                    <button class="update" data-id="07f260f4-466c-4607-9a33-f7273b24f1b4">Update</button>
+                    <button class="delete" data-id="07f260f4-466c-4607-9a33-f7273b24f1b4">Delete</button>
+                </div>
+                <div class="catch">
+                    <label>Angler</label>
+                    <input class="angler" disabled type="text" value="John Does">
+                    <label>Weight</label>
+                    <input class="weight" disabled type="text" value="554">
+                    <label>Species</label>
+                    <input class="species" disabled type="text" value="Atlantic Blue Marlin">
+                    <label>Location</label>
+                    <input class="location" disabled type="text" value="Buenos Aires, Argentina">
+                    <label>Bait</label>
+                    <input class="bait" disabled type="text" value="trolled pink">
+                    <label>Capture Time</label>
+                    <input class="captureTime" disabled type="number" value="120">
+                    <button class="update" data-id="bdabf5e9-23be-40a1-9f14-9117b6702a9d" disabled>Update</button>
+                    <button class="delete" data-id="bdabf5e9-23be-40a1-9f14-9117b6702a9d" disabled>Delete</button>
+                </div>
+            </div>
+        </fieldset>
+        <aside>
+            <button class="load">Load</button>
+            <form id="addForm">
+                <fieldset>
+                    <legend>Add Catch</legend>
+                    <label>Angler</label>
+                    <input class="angler" name="angler" type="text"/>
+                    <label>Weight</label>
+                    <input class="weight" name="weight" type="number"/>
+                    <label>Species</label>
+                    <input class="species" name="species" type="text"/>
+                    <label>Location</label>
+                    <input class="location" name="location" type="text"/>
+                    <label>Bait</label>
+                    <input class="bait" name="bait" type="text"/>
+                    <label>Capture Time</label>
+                    <input class="captureTime" name="captureTime" type="number"/>
+                    <button class="add" disabled>Add</button>
+                </fieldset>
+            </form>
+        </aside>
+    </section>
+</main>
+</body>
+
+</html>

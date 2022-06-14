@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Biggest Catch</title>
+    <link href="../static/styles.css" rel="stylesheet">
+    <script src="./login.js" type="module"></script>
+</head>
+
+<body>
+<header>
+    <h1>Biggest Catch</h1>
+    <nav>
+        <a class="active" href="index.html" id="home">Home</a>
+        <div id="user">
+            <a href="javascript:void(0)" id="logout">Logout</a>
+        </div>
+        <div id="guest">
+            <a href="login.html" id="login">Login</a>
+            <a href="register.html" id="register">Register</a>
+        </div>
+        <p class="email">Welcome, <span>guest</span></p>
+    </nav>
+</header>
+<main>
+    <section id="login-view">
+        <h2>Login</h2>
+        <form id="login">
+            <label>Email: <input name="email" type="text"></label>
+            <label>Password: <input name="password" type="password"></label>
+            <p class="notification"></p>
+            <button>Login</button>
+        </form>
+    </section>
+</main>
+</body>
+
+</html>
