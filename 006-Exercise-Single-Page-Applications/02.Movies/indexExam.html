@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Application 2020</title>
+    <link href="../static/favicon.ico" rel="icon" type="image/png">
+    <link href="../static/css/site.css" rel="stylesheet" type="text/css">
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet">
+</head>
+
+<body>
+<div class="container" id="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand text-light" href="#">Movies</a>
+        <ul class="navbar-nav ml-auto ">
+            <li class="nav-item">
+                <a class="nav-link">Welcome, email</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="home-page">
+        <div class="jumbotron jumbotron-fluid text-light" style="background-color: #343a40;">
+            <img alt="Responsive image"
+                 class="img-fluid" src="https://slicksmovieblog.files.wordpress.com/2014/08/cropped-movie-banner-e1408372575210.jpg" style="width: 150%; height: 200px">
+            <h1 class="display-4">Movies</h1>
+            <p class="lead">Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
+        </div>
+    </section>
+
+    <h1 class="text-center">Movies</h1>
+
+    <section id="add-movie-button">
+        <a class="btn btn-warning " href="#">Add Movie</a>
+    </section>
+
+    <section id="movie">
+        <div class=" mt-3 ">
+            <div class="row d-flex d-wrap">
+
+                <div class="card-deck d-flex justify-content-center">
+
+                    <div class="card mb-4">
+                        <img alt="Card image cap" class="card-img-top"
+                             src="https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">Wonder Woman 1984</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#/details/6lOxMFSMkML09wux6sAF">
+                                <button class="btn btn-info" type="button">Details</button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="card mb-4">
+                        <img alt="Card image cap"
+                             class="card-img-top"
+                             src="https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">Top Gun 2</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#/details/CUtL9j4qI0XVhn9kTUsx">
+                                <button class="btn btn-info" type="button">Details</button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="card mb-4">
+                        <img alt="Card image cap" class="card-img-top"
+                             src="https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">Black Widow</h4>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#/details/krPgQD6SWf39bM4x00co">
+                                <button class="btn btn-info" type="button">Details</button>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="add-movie">
+        <form action="#" class="text-center border border-light p-5" method="">
+            <h1>Add Movie</h1>
+            <div class="form-group">
+                <label for="title">Movie Title</label>
+                <input class="form-control" name="title" placeholder="Title" type="text" value="">
+            </div>
+            <div class="form-group">
+                <label for="description">Movie Description</label>
+                <textarea class="form-control" name="description" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image url</label>
+                <input class="form-control" name="imageUrl" placeholder="Image Url" type="text" value="">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="movie-example">
+        <div class="container">
+            <div class="row bg-light text-dark">
+                <h1>Movie title: Black Widow</h1>
+
+                <div class="col-md-8">
+                    <img alt="Movie" class="img-thumbnail"
+                         src="https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg">
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3 class="my-3 ">Movie Description</h3>
+                    <p>Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous
+                        conspiracy
+                        with ties to her past arises. Comes on the screens 2020.</p>
+                    <a class="btn btn-danger" href="#">Delete</a>
+                    <a class="btn btn-warning" href="#">Edit</a>
+                    <a class="btn btn-primary" href="#">Like</a>
+                    <span class="enrolled-span">Liked 1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edit-movie">
+        <form action="#" class="text-center border border-light p-5" method="">
+            <h1>Edit Movie</h1>
+            <div class="form-group">
+                <label for="title">Movie Title</label>
+                <input class="form-control" name="title" placeholder="Movie Title" type="text" value="">
+            </div>
+            <div class="form-group">
+                <label for="description">Movie Description</label>
+                <textarea class="form-control" name="description" placeholder="Movie Description..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageUrl">Image url</label>
+                <input class="form-control" name="imageUrl" placeholder="Image Url" type="text" value="">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="form-login">
+        <form action="" class="text-center border border-light p-5" method="">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" placeholder="Email" type="email" value="">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" name="password" placeholder="Password" type="password" value="">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="form-sign-up">
+        <form action="#" class="text-center border border-light p-5" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" name="email" placeholder="Email" type="email" value="">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input class="form-control" name="password" placeholder="Password" type="password" value="">
+            </div>
+
+            <div class="form-group">
+                <label for="repeatPassword">Repeat Password</label>
+                <input class="form-control" name="repeatPassword" placeholder="Repeat-Password" type="password"
+                       value="">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Register</button>
+        </form>
+    </section>
+
+    <footer class="page-footer font-small">
+        <div class="footer-copyright text-center py-3">© 2020
+            <a class="text-dark" href="#">JS
+                Applications</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
