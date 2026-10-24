@@ -1,0 +1,21 @@
+{
+  "name": "js-applications",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SoftUni JS Applications course solutions",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lit-html": "^2.8.0",
+    "page": "^1.11.6"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0"
+  }
+}

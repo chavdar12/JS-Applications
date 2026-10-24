@@ -1,0 +1,10 @@
+function loadRepos() {
+    const xhr = new XMLHttpRequest();
+    xhr.addEventListener('readystatechange', () => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('res').textContent = xhr.responseText;
+        }
+    });
+    xhr.open('GET', 'https://api.github.com/users/testnakov/repos');
+    xhr.send();
+}
