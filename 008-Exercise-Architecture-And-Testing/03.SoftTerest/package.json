@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^2.8.0",
+    "lit-html": "^3.3.3",
     "page": "^1.11.6"
   },
   "devDependencies": {

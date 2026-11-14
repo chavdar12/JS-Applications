@@ -1,23 +1,20 @@
 import { readFile } from 'node:fs/promises';
-import { JSDOM, ResourceLoader, VirtualConsole } from 'jsdom';
+import { JSDOM, VirtualConsole, requestInterceptor } from 'jsdom';
 
 const ORIGIN = 'http://localhost:3000';
+const TYPES = { js: 'text/javascript', mjs: 'text/javascript', css: 'text/css', html: 'text/html', json: 'application/json' };
 
-// Serves the program folder as http://localhost:3000/ so absolute script paths and localStorage work.
-class LocalLoader extends ResourceLoader {
-    constructor(root) {
-        super();
-        this.root = root;
+// Serves the program folder as http://localhost:3000/ so absolute script paths and localStorage work;
+// anything else (CDNs) gets an empty body.
+const localLoader = (root) => requestInterceptor(async (request) => {
+    const u = new URL(request.url);
+    const type = TYPES[u.pathname.split('.').pop()] ?? 'text/plain';
+    if (u.origin !== ORIGIN) {
+        return new Response('', { headers: { 'Content-Type': type } });
     }
-
-    fetch(url) {
-        const u = new URL(url);
-        if (u.origin !== ORIGIN) {
-            return Promise.resolve(Buffer.from(''));
-        }
-        return readFile(new URL('.' + decodeURIComponent(u.pathname), this.root));
-    }
-}
+    const body = await readFile(new URL('.' + decodeURIComponent(u.pathname), root));
+    return new Response(body, { headers: { 'Content-Type': type } });
+});
 
 // Globals that ES modules read as free identifiers (classic scripts get them from window).
 const GLOBALS = ['window', 'document', 'location', 'history', 'localStorage', 'sessionStorage', 'navigator',
@@ -40,7 +37,7 @@ export async function loadPage(pageUrl, {
     const alerts = [];
     const errors = [];
     const virtualConsole = new VirtualConsole();
-    virtualConsole.sendTo(console, { omitJSDOMErrors: true });
+    virtualConsole.forwardTo(console, { jsdomErrors: 'none' });
     virtualConsole.on('jsdomError', (err) => {
         // redirects after login etc. are expected; jsdom just can't follow them
         if (!err.message.startsWith('Not implemented: navigation')) {
@@ -52,7 +49,7 @@ export async function loadPage(pageUrl, {
         virtualConsole,
         url: `${ORIGIN}/${pageUrl.href.slice(root.href.length)}`,
         runScripts: 'dangerously',
-        resources: new LocalLoader(root),
+        resources: { interceptors: [localLoader(root)] },
         pretendToBeVisual: true,
         beforeParse(window) {
             window.fetch = fetch;
