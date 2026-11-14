@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch, settle } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch, settle } from '../test-utils/dom.mjs';
 
 test('fills the menu on load and adds new items', async () => {
     const items = { a: { _id: 'a', text: 'Rome' }, b: { _id: 'b', text: 'Amsterdam' } };

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, submit } from '../../test-utils/dom.mjs';
+import { loadPage, submit } from '../test-utils/dom.mjs';
 
 test('renders comma separated towns as a list and replaces it on the next load', async () => {
     const { document } = await loadPage(new URL('./index.html', import.meta.url));

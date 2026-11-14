@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch, reply, settle, submit } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch, reply, settle, submit } from '../test-utils/dom.mjs';
 
 const page = new URL('./index.html', import.meta.url);
 const storage = { user: JSON.stringify({ email: 'peter@abv.bg', id: 'u1', token: 'tok' }) };

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage } from '../../test-utils/dom.mjs';
+import { loadPage } from '../test-utils/dom.mjs';
 
 const page = new URL('./index.html', import.meta.url);
 

@@ -1,0 +1,19 @@
+{
+  "name": "009-client-side-rendering",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"**/*.test.mjs\"",
+    "server": "cd server && node server.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "lit-html": "^3.3.3",
+    "page": "^1.11.6"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}

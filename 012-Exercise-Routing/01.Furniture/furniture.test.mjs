@@ -1,6 +1,6 @@
 import { before, test } from 'node:test';
 import assert from 'node:assert/strict';
-import { click as userClick, loadPage, mockFetch, reply, settle, submit } from '../../test-utils/dom.mjs';
+import { click as userClick, loadPage, mockFetch, reply, settle, submit } from '../test-utils/dom.mjs';
 
 // page.js is a singleton bound to one window, so the whole file walks through one session.
 const table = { _id: 't1', _ownerId: 'u1', make: 'Table', model: 'Swedish', year: 2015, description: 'Medium table', price: 235, img: '/images/table.png', material: 'Wood' };

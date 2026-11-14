@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch, settle, submit } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch, settle, submit } from '../test-utils/dom.mjs';
 
 test('renders the whole library with lit-html and supports CRUD', async () => {
     const db = { b1: { title: 'Harry Potter', author: 'J. K. Rowling' }, b2: { title: 'Game of Thrones', author: 'George R. R. Martin' } };

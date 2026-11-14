@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch } from '../test-utils/dom.mjs';
 
 test('renders students and selects matching rows case-insensitively', async () => {
     const fetch = mockFetch({

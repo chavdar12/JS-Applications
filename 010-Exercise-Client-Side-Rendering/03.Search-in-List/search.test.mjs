@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage } from '../../test-utils/dom.mjs';
+import { loadPage } from '../test-utils/dom.mjs';
 import { towns } from './towns.js';
 
 test('lists towns and highlights matches', async () => {
