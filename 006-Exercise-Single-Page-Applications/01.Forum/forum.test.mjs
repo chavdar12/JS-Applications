@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch, settle, type } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch, settle, type } from '../test-utils/dom.mjs';
 
 const page = new URL('./index.html', import.meta.url);
 const topic = { _id: 'p1', title: 'Angular 10', username: 'David', content: 'Lorem', createdOn: '2020-10-10T12:08:28.451Z' };

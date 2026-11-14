@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage, mockFetch, settle, submit } from '../../test-utils/dom.mjs';
+import { loadPage, mockFetch, settle, submit } from '../test-utils/dom.mjs';
 
 const page = new URL('./index.html', import.meta.url);
 const student = { firstName: 'Isaac', lastName: 'Netero', facultyNumber: '9000', grade: 4.99, _id: 's1' };

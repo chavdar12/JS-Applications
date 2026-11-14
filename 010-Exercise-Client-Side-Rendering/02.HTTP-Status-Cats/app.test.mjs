@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPage } from '../../test-utils/dom.mjs';
+import { loadPage } from '../test-utils/dom.mjs';
 
 test('renders all cats and toggles the status code', async () => {
     const { document } = await loadPage(new URL('./index.html', import.meta.url));

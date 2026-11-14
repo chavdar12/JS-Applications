@@ -1,16 +1,14 @@
 {
-  "name": "js-applications",
-  "version": "1.0.0",
+  "name": "002-exercise-asynchronous-programming",
   "private": true,
-  "description": "SoftUni JS Applications course solutions",
   "type": "module",
   "scripts": {
-    "test": "node --test \"**/*.test.mjs\""
+    "test": "node --test \"**/*.test.mjs\"",
+    "server": "cd server && node server.cjs"
   },
   "engines": {
     "node": ">=22"
   },
-  "license": "MIT",
   "dependencies": {
     "lit-html": "^3.3.3",
     "page": "^1.11.6"

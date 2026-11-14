@@ -1,7 +1,7 @@
 import { before, test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { click as userClick, loadPage, mockFetch, reply, settle, submit } from '../../../test-utils/dom.mjs';
+import { click as userClick, loadPage, mockFetch, reply, settle, submit } from '../../test-utils/dom.mjs';
 
 // page.js is a singleton bound to one window, so the whole file walks through one session.
 const mock = JSON.parse(await readFile(new URL('./mock-data.json', import.meta.url), 'utf8'));
